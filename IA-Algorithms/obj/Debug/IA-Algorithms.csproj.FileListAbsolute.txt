@@ -1,0 +1,10 @@
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\bin\Debug\IA-Algorithms.exe.config
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\bin\Debug\IA-Algorithms.exe
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\bin\Debug\IA-Algorithms.pdb
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.csprojResolveAssemblyReference.cache
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.exe
+C:\Users\kemin\source\repos\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.pdb
+E:\DOCUMENTS\KEMING Loic\IA-Algorithms\IA-Algorithms\bin\Debug\IA-Algorithms.exe.config
+E:\DOCUMENTS\KEMING Loic\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.exe
+E:\DOCUMENTS\KEMING Loic\IA-Algorithms\IA-Algorithms\obj\Debug\IA-Algorithms.pdb
