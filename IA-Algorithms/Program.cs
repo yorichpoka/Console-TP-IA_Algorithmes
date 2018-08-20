@@ -1,4 +1,5 @@
 ﻿using IA_Algorithms.Model;
+using IA_Algorithms.Model.Static;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,26 @@ namespace IA_Algorithms
         //        }
         //    }
         //}
+
+        static void Afficher_BFS(Node node)
+        {
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(node);
+            while (queue.Count > 0)
+            {
+                node = queue.Dequeue();
+                Console.Write(node.value + " -> ");
+
+                if (node.left != null)
+                {
+                    queue.Enqueue(node.left);
+                }
+                if (node.right != null)
+                {
+                    queue.Enqueue(node.right);
+                }
+            }
+        }
 
         static void bfs(Node node)
         {
@@ -109,69 +130,71 @@ namespace IA_Algorithms
             #endregion
 
 
-            int size_table;
+            //int size_table;
 
-            // -- Message -- //
-            Console.Write("- > Taille du jeu: ");
+            //// -- Message -- //
+            //Console.Write("- > Taille du jeu: ");
 
-            // -- Get size table -- //
-            size_table = int.Parse(Console.ReadLine());
+            //// -- Get size table -- //
+            //size_table = int.Parse(Console.ReadLine());
 
-            // -- Update size id -- //
-            Node.size_max_id = (size_table * size_table).ToString().Length;
+            //// -- Update size id -- //
+            //Node.size_max_id = (size_table * size_table).ToString().Length;
 
-            // -- Create node -- //
-            Node node = new Node();
-            Node node_clone = new Node();
+            //// -- Create node -- //
+            //Node node = new Node();
+            //Node node_clone = new Node();
 
-            // -- Generate array -- //
-            node.Generate(size_table);
+            //// -- Generate array -- //
+            //node.Generate(size_table);
 
-            #region Create food
-            // -- Create food -- //
-            string food;
+            //#region Create food
+            //// -- Create food -- //
+            //string food;
 
-            // -- Message -- //
-            Console.Write("- > Valeur de la nourriture: ");
+            //// -- Message -- //
+            //Console.Write("- > Valeur de la nourriture: ");
 
-            // -- Get size table -- //
-            food = Console.ReadLine();
-            #endregion
+            //// -- Get size table -- //
+            //food = Console.ReadLine();
+            //#endregion
 
-            // -- Generate food -- //
-            Node.Insert_food(size_table, food, node);
+            //// -- Generate food -- //
+            //Node.Insert_food(size_table, food, node);
 
-            // -- Displays bfs -- //
-            bfs(node);
+            //// -- Displays bfs -- //
+            //bfs(node);
 
-            // -- Message -- //
-            Console.WriteLine("\n -> Affichage du jeu <- \n");
-            
-            // -- Afficher -- //
-            node.Afficher_BFS(node, size_table, food.Length);
+            //// -- Message -- //
+            //Console.WriteLine("\n -> Affichage du jeu <- \n");
 
-            #region Create body
-            // -- Create food -- //
-            string body;
+            //// -- Afficher -- //
+            //node.Afficher_BFS(node, size_table, food.Length);
 
-            // -- Message -- //
-            Console.Write("- > Corps du serpent: ");
+            //#region Create body
+            //// -- Create food -- //
+            //string body;
 
-            // -- Get size table -- //
-            body = Console.ReadLine();
-            #endregion
+            //// -- Message -- //
+            //Console.Write("- > Corps du serpent: ");
 
-            // -- Message -- //
-            Console.WriteLine(" -> Parcourt du serpent dans le jeu <-");
-            
-            // -- Generate food -- //
-            Node.Generate_Snake(food, body, node);
+            //// -- Get size table -- //
+            //body = Console.ReadLine();
+            //#endregion
 
-            // -- Message -- //
-            Console.WriteLine(" -> Rendu du jeu avec le passage serpent <- \n");
+            //// -- Message -- //
+            //Console.WriteLine(" -> Parcourt du serpent dans le jeu <-");
 
-            // -- Afficher -- //
-            node.Afficher_BFS(node, size_table);
+            //// -- Generate food -- //
+            //Node.Generate_Snake(food, body, node);
+
+            //// -- Message -- //
+            //Console.WriteLine(" -> Rendu du jeu avec le passage serpent <- \n");
+
+            //// -- Afficher -- //
+            //node.Afficher_BFS(node, size_table);
+
+            Afficher_BFS(IAClass.arbre());
 
             // -- Bloquer l'ecran -- //
             Console.ReadLine();

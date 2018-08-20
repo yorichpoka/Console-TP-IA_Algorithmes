@@ -12,7 +12,7 @@ namespace IA_Algorithms.Model
         public static int id = 0;
         public string ID = null;
         public static int size_max_id;
-        private string value;
+        public string value;
         private string iD;
 
         // -- Constructeur de node -- //
@@ -24,6 +24,7 @@ namespace IA_Algorithms.Model
             Node.id++;
             this.ID = Generate_ID(Node.id);
         }
+
         // -- Constructeur de node -- //
         public Node(Boolean isEmpty, Nullable<Boolean> isLeft)
         {
@@ -60,6 +61,7 @@ namespace IA_Algorithms.Model
                 node = node.right;
             }
         }
+
         public void Afficher(Node node)
         {
             while (node != null)
@@ -83,6 +85,7 @@ namespace IA_Algorithms.Model
                 node = node.right;
             }
         }
+
         public void Afficher_BFS(Node node, int size_table)
         {
             Queue<Node> queue = new Queue<Node>();
@@ -125,6 +128,7 @@ namespace IA_Algorithms.Model
                 }
             }
         }
+
         public void Afficher_BFS(Node node, int size_table, int length_foot_value)
         {
             string empty_value = Generate_Space(length_foot_value);
@@ -171,6 +175,7 @@ namespace IA_Algorithms.Model
                 }
             }
         }
+
         public Node()
         {
             this.isEmpty = false;
@@ -179,6 +184,11 @@ namespace IA_Algorithms.Model
             Node.id++;
             this.ID = Generate_ID(Node.id);
             //Console.Write(this.ID + ", -> ");
+        }
+
+        public Node(string value)
+        {
+            this.value = value;
         }
 
         public Node(Node left, Node right, string value, string iD, bool isEmpty)
@@ -230,6 +240,7 @@ namespace IA_Algorithms.Model
                 }
             }
         }
+
         // -- insert food -- //
         public static void Insert_food(int size_table, string value, Node node)
         {
